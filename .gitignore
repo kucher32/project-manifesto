@@ -1,0 +1,37 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if scripts/ later use npm)
+node_modules/
+
+# Build output (if examples include built artifacts)
+dist/
+build/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Operator-only paths — never tracked on the public mirror.
+# Adopters with their own private/public split can keep this section and
+# add similar entries for their own internal artifacts.
+CLAUDE.md
+OPERATING.md
+docs/branches.md
+docs/sanitization-checklist.md
+_drafts/
+_inbox/
+docs/sessions/
+
+# Operator-only scratch directory — landing-brief reference material,
+# downloaded assets, anything not meant for commit.
+_inbox/
