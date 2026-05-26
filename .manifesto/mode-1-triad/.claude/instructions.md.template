@@ -1,0 +1,40 @@
+# Layer 2 — project-specific runtime law for {{PROJECT_NAME}}
+
+> Read by Claude Code at session start per bootstrap instruction in CLAUDE.md.
+> Layer 1 (Claude.ai preferences) carries universal rules. Layer 2 (this file)
+> carries project-specific specializations referenced by Layer 1 rules.
+
+## Working repository
+
+Path: {{PROJECT_PATH}}
+Remote: {{REPO_URL}}
+
+## Project signals
+
+Operator may use these conversational signals; you recognize them as workflow commands:
+
+- "готово" / "done" / "ok" / "next" — current step complete; perform Pack S verification.
+- "закрой сессию" / "close session" — initiate session closure per Layer 1 rule 13.
+- {{ADDITIONAL_SIGNALS_OR_EMPTY}}
+
+## Named destructive operations (project-specific)
+
+These operations require Pack R pause checkpoint before execution, in addition to the universal list (rm -rf, git reset --hard, git push --force, DROP TABLE, package downgrades, key revocation per Layer 1 rule 6).
+
+{{PROJECT_DESTRUCTIVE_OPS_OR_EMPTY}}
+
+## State-record artifacts (project-specific)
+
+These files track state in this project; any step that changes state covered by these files must update them in the same step (per Layer 1 rule 11).
+
+- BACKLOG.md — current tasks (universal)
+- PROJECT.md — project facts (universal)
+- {{ADDITIONAL_STATE_RECORDS_OR_EMPTY}}
+
+## MCP activation cue
+
+If MCP filesystem becomes available mid-session and was not available at start, do this on activation: re-read .claude/instructions.md (this file), latest session log, BACKLOG.md to catch any state that changed via Operator outside Claude Code.
+
+## Working language for this project
+
+{{WORKING_LANGUAGE_NOTE}}

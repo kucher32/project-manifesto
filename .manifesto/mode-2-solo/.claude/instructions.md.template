@@ -1,0 +1,36 @@
+# Layer 2 — project-specific runtime law for {{PROJECT_NAME}} (solo mode)
+
+> Read by Claude Code at session start per bootstrap instruction in CLAUDE.md.
+> In mode-2, CLAUDE.md carries most rules including the three-phase workflow.
+> This file carries only project-specific specializations.
+
+## Working repository
+
+Path: {{PROJECT_PATH}}
+Remote: {{REPO_URL}}
+
+## Project signals
+
+Operator may use these conversational signals:
+
+- "готово" / "done" / "ok" / "next" — current step complete or Phase transition acknowledged.
+- "закрой сессию" / "close session" — initiate session closure (commit current state, write daily handoff).
+- {{ADDITIONAL_SIGNALS_OR_EMPTY}}
+
+## Named destructive operations (project-specific)
+
+These operations require pause checkpoint before execution (Phase 2 halts), in addition to the universal list listed in CLAUDE.md Phase 2 section.
+
+{{PROJECT_DESTRUCTIVE_OPS_OR_EMPTY}}
+
+## State-record artifacts (project-specific)
+
+These files track state in this project; any Phase 2 step that changes state covered by these files must update them in the same step.
+
+- BACKLOG.md — current tasks (universal)
+- PROJECT.md — project facts (universal)
+- {{ADDITIONAL_STATE_RECORDS_OR_EMPTY}}
+
+## Working language for this project
+
+{{WORKING_LANGUAGE_NOTE}}
