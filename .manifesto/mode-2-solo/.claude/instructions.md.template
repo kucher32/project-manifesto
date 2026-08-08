@@ -1,0 +1,61 @@
+# Layer 2 — project-specific runtime law for {{PROJECT_NAME}} (solo mode)
+
+> Read by Claude Code at session start per bootstrap instruction in CLAUDE.md.
+> In mode-2, CLAUDE.md carries most rules including the three-phase workflow.
+> This file carries only project-specific specializations.
+
+## Working repository
+
+Path: {{PROJECT_PATH}}
+Remote: {{REPO_URL}}
+
+## Project signals
+
+Operator may use these conversational signals:
+
+- "готово" / "done" / "ok" / "next" — current step complete or Phase transition acknowledged.
+- "закрой сессию" / "close session" — initiate session closure (commit current state, write daily handoff).
+- {{ADDITIONAL_SIGNALS_OR_EMPTY}}
+
+## Named destructive operations (project-specific)
+
+These operations require pause checkpoint before execution (Phase 2 halts), in addition to the universal list listed in CLAUDE.md Phase 2 section.
+
+{{PROJECT_DESTRUCTIVE_OPS_OR_EMPTY}}
+
+## State-record artifacts (project-specific)
+
+These files track state in this project; any Phase 2 step that changes state covered by these files must update them in the same step.
+
+- BACKLOG.md — current tasks (universal)
+- PROJECT.md — project facts (universal)
+- {{ADDITIONAL_STATE_RECORDS_OR_EMPTY}}
+
+## Tooling check
+
+Dated record of tool behaviour that rules in this project depend on.
+Rules carry principles; current values — model aliases, effort
+levels and their defaults, menu contents, features that fail the
+autonomy test — live here with the date and tool version they were
+checked against. Re-verify when the rule resting on a value is next
+touched, or when the tool's minor version moves.
+
+Checked {{DATE}} against {{TOOL_AND_VERSION}}.
+
+{{TOOLING_CHECK_FINDINGS_OR_EMPTY}}
+
+## Autonomy boundary opt-in
+
+By default, every feature that fails the autonomy test — work
+advances, or a decision becomes final, without the Operator seeing
+the result and signalling proceed — is forbidden in this project. A
+project may enable at most one such feature, only here, naming the
+specific feature and the compensating gate that keeps the Operator's
+proceed signal intact. Enabling without a named compensating gate is
+not available.
+
+{{AUTONOMY_OPTIN_OR_EMPTY}}
+
+## Working language for this project
+
+{{WORKING_LANGUAGE_NOTE}}
